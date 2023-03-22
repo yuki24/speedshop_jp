@@ -1,0 +1,22 @@
+title: Speedshop - Ruby on Rails performance consulting
+email: nate.berkopec@speedshop.co
+description: >
+  Speedshop is a one-man Ruby on Rails performance consultancy that
+  optimizes the full stack - frontend, backend and environment - to generate
+  revenue and cut scaling costs for businesses on Rails. Fast sites are
+  profitable sites. Speed is a feature.
+baseurl: ""
+url: "https://www.speedshop.co"
+permalink: /:year/:month/:day/:title.html
+plugins:
+  - jekyll-sitemap
+markdown: kramdown
+kramdown:
+  auto_ids: true
+encoding: utf-8
+exclude:
+   - _h2o
+   - Procfile
+   - wercker.yml
+   - Gemfile
+   - Gemfile.lock

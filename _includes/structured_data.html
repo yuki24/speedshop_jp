@@ -1,0 +1,56 @@
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  {% if page.readtime %}
+    "@type": "TechArticle",
+    "dependencies": "Ruby on Rails",
+    "proficiencyLevel": "Expert",
+    "wordcount": {{ page.wordcount }},
+  {% elsif page.price %}
+    "@type": "Product",
+    "name": "{{ page.productName }}",
+    "offers": {
+      "@type": "Offer",
+      "price": {{ page.price }},
+      "priceCurrency": "USD",
+      "seller": {
+        "@type": "Organization",
+        "name": "Speedshop"
+      }
+    },
+    "brand": "The Speedshop",
+  {% else %}
+    "@type": "WebPage",
+  {% endif %}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ page.url | absolute_url }}"
+  },
+  {% if page.title %}
+    "headline": "{{ page.title }}",
+  {% endif %}
+  {% if page.image %}
+    "image": ["{{ page.image | absolute_url }}"],
+  {% endif %}
+  {% if page.date %}
+    "datePublished": "{{ page.date }}",
+  {% endif %}
+  {% if page.summary %}
+    "description": "{{ page.summary | strip_html | normalize_whitespace | truncate: 160 | escape }}",
+  {% endif %}
+  "publisher": {
+    "@type": "Organization",
+    "name": "Speedshop",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://speedshop.co/assets/img/speedshop_s_big.png",
+      "width": 497,
+      "height": 497
+    }
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Nate Berkopec"
+  }
+}
+</script>

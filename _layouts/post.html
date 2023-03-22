@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {% include head.html %}
+
+  <body>
+    <script>0</script>
+    <main aria-label="Content">
+      <div class="container">
+        <div class="post">
+          <div class="row">
+            <div class="column column-67 column-collapsible">
+              <article>
+                <h1 style="margin-bottom: 1rem;">{{ page.title | titleize }}</h1>
+                <div style="margin: 0rem 0 2rem 0">
+                  by <b>Nate Berkopec</b>
+                  (<a target="_blank" href="http://twitter.com/nateberkopec">@nateberkopec</a>)
+                  of <a target="_blank" href="/" style="display: inline-block;width: 9rem;position: relative;top: 0.3rem;">
+                    {% include speedshop_wordmark.svg %}
+                  </a> <a target="_blank" href="/">(who?)</a>,
+                  a Rails performance consultancy.
+                </div>
+
+                <div class="marginnote">
+                  {% include social-bar.html %}
+                </div>
+
+                {% if page.summary %}
+                  <div class="summary">
+                    <b>Summary:</b> {{ page.summary }} <i>({{page.readtime}})</i>
+                  </div>
+                {% endif %}
+
+                {{ content }}
+
+                {% include social-bar.html %}
+                <div style="height: 3rem"></div>
+              </article>
+            </div>
+          </div>
+
+          {% include mailing.html %}
+
+          {% include cgrp.html %}
+
+          <div class="row">
+            <div class="column">
+              <h2>More Posts</h2>
+            </div>
+          </div>
+
+          {% for post in site.posts %}
+            {% if post.title != page.title %}
+              {% cycle 'add row' : '<div class="row">', '' %}
+                <div class="column column-50 column-collapsible">
+                  <h3>
+                    <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                  </h3>
+                  <p>
+                    {{ post.summary | strip_html | truncatewords: 50 }}
+                  </p>
+                  <p><a href="{{ post.url | prepend: site.baseurl }}">Read more</a></p>
+                </div>
+              {% cycle 'end row' : '', '</div>' %}
+            {% endif %}
+
+          {% endfor %}
+          {% cycle 'end row' : nil, '</div>' %}
+        </div>
+        <div id="innocuous" class="fader-fast innocuous">
+          <a id="innocuous-close" class="innocuous-close">Close</a>
+          <h4>Get notified on new posts.</h4>
+          <p>Straight from the author. No spam, no bullshit. Frequent email-only content.</p>
+          {% include mailchimp.html %}
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+.post
+  font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif
+  margin-top: 2rem
+
+  h1,h2,h3,h4,h5,h6
+    font-family: "Helvetica Neue", Helvetica, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, Arial, sans-serif
+
+  h2
+    background: black
+    color: white
+    padding: 3.5rem 1rem
+    margin-left: -1rem
+
+  dl,
+  ol,
+  ul,
+  code,
+  p
+    font-size: 2.2rem
+
+  .highlight code
+    font-size: 1.4rem
+
+  p,pre,ul
+    margin-bottom: 3.5rem
+
+  @media screen and (max-width: $mini-breakpoint)
+    dl,
+    ol,
+    ul,
+    code,
+    p
+      font-size: 1.7rem
+
+    p
+      hyphens: auto
+
+  img
+    max-width: 100%
+
+  .sidenote, .marginnote
+    float: right
+    clear: right
+    margin-right: -50%
+    width: 43%
+    margin-top: 0rem
+    margin-bottom: 1.96rem
+    font-size: 0.65em
+    vertical-align: baseline
+    position: relative
+    text-indent: 0
+
+  .sidenote img, .marginnote img
+    height: auto
+    max-width: 100%
+
+  .sidenote-parens
+    display: none
+
+  blockquote p
+    margin-bottom: 0 !important
+
+  @media screen and (max-width: $medium-breakpoint)
+    .sidenote, .sidenote-number
+      display: none
+    .sidenote-parens
+      display: inline
+    .marginnote
+      width: auto
+      text-align: center
+      margin: 0
+      float: none
+      display: block
+    .no-mobile
+      display: none
+
+  @media screen and (min-width: $hd-breakpoint)
+    .sidenote img, .marginnote img
+      max-width: 150%
+
+.mailchimp
+  .email
+    font-size: 1.6rem
+    background: #FFF
+    width: 250px
+
+div.innocuous
+  font-family: sans-serif
+
+div.innocuous
+  border: 4px solid #333
+  padding: 2rem
+  position: fixed
+  max-width: 50rem
+  box-shadow: -10px -10px 20px rgba(0,0,0,0.15), 0 6px 6px rgba(0,0,0,0.20)
+  bottom: -4px
+  right: -4px
+  background-color: #fff
+  border-top-left-radius: 6px
+  display: none
+
+a.innocuous-close
+  position: absolute
+  top: 2rem
+  right: 2rem
+  display: block
+  text-decoration: underline
+  font-weight: bold
+  letter-spacing: 1px
+  font-size: 1.2rem
+  text-transform: uppercase
+  color: #00e
+
+div.innocuous h4
+  margin: 0px
+  font-size: 2.2rem
+  margin-bottom: 1rem
+  color: #333
+
+div.innocuous p
+  margin: 0px
+  font-size: 1.8rem
+  line-height: 2.8rem
+  margin-bottom: .85rem
+  color: #333
+  font-family: sans-serif
+
+div.innocuous form
+  font-size: 0rem
+  display: flex
+  width: 100%
+  margin: 0px
+  margin-bottom: 1rem
+
+div.innocuous input[type='email']
+  padding: .5rem
+  font-size: 1.1rem
+  flex-grow: 1
+  margin: 0px
+  border-top-right-radius: 0px
+  border-bottom-right-radius: 0px
+
+
+div.innocuous input[type='submit']
+  background-color: #0000EE
+  color: #fff
+  max-width: 10rem
+  letter-spacing: 1px
+  font-size: .9rem
+  border-color: #0000EE
+  border-top-left-radius: 0px
+  border-bottom-left-radius: 0px
+
+.summary
+  background: rgb(221, 221, 221)
+  padding: 1rem
+  margin-bottom: 3.5rem
+  font-size: 2.2rem

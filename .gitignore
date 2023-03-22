@@ -1,0 +1,9 @@
+_site
+.sass-cache
+.jekyll-metadata
+.asset-cache
+.jekyll-cache
+vendor/
+*.tfvars
+.terraform
+node_modules
