@@ -13,13 +13,13 @@ terraform {
   backend "s3" {
     bucket = "speedshop-terraform"
     key    = "#{local.infra_name}-prod.tfstate"
-    region = "us-east-1"
+    region = "ap-northeast-1"
   }
 }
 
 locals {
-  infra_name = "www.speedshop.co"
-  region     = "us-east-1"
+  infra_name = "www.speedshop.co.jp"
+  region     = "ap-northeast-1"
 }
 
 provider "aws" {
@@ -54,5 +54,5 @@ resource "aws_s3_bucket" "website" {
 
 # Someday I will do a complete cloudflare import
 resource "cloudflare_zone" "cdn" {
-  zone = "speedshop.co"
+  zone = "speedshop.co.jp"
 }

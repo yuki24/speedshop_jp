@@ -6,7 +6,7 @@ description: >
   revenue and cut scaling costs for businesses on Rails. Fast sites are
   profitable sites. Speed is a feature.
 baseurl: ""
-url: "https://www.speedshop.co"
+url: "https://www.speedshop.co.jp"
 permalink: /:year/:month/:day/:title.html
 plugins:
   - jekyll-sitemap
