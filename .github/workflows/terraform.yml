@@ -5,6 +5,7 @@ env:
   tf_working_dir: '.'
 jobs:
   terraform:
+    environment: production
     name: 'Terraform'
     runs-on: ubuntu-latest
     steps:
