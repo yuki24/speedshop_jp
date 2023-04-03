@@ -1,10 +1,6 @@
-title: Speedshop - Ruby on Rails performance consulting
+title: Speedshop株式会社 - Ruby on Rails のパフォーマンスコンサルティング
 email: nate.berkopec@speedshop.co
-description: >
-  Speedshop is a one-man Ruby on Rails performance consultancy that
-  optimizes the full stack - frontend, backend and environment - to generate
-  revenue and cut scaling costs for businesses on Rails. Fast sites are
-  profitable sites. Speed is a feature.
+description: スピードショップ株式会社は、Ruby on Rails のパフォーマンスコンサルティング企業です。ツール、情報、トレーニングを通じて、Rails を使ったビジネスの収益を上げ、スケーリングコストを削減するためにすべてのスタック（フロントエンド、バックエンド、インフラ）を最適化します。高速なサイトは収益性の高いサイトであり、スピードは価値です。
 baseurl: ""
 url: "https://www.speedshop.co.jp"
 permalink: /:year/:month/:day/:title.html
