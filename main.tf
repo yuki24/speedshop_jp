@@ -5,15 +5,15 @@ terraform {
       version = "~> 3.0"
     }
     cloudflare = {
-      source  = "cloudflare/cloudflare"
+      source = "cloudflare/cloudflare"
       version = "~> 3.0"
     }
   }
 
   backend "s3" {
     bucket = "speedshop-terraform"
-    key    = "#{local.infra_name}-prod.tfstate"
-    region = "ap-northeast-1"
+    key    = "speedshop-jp-prod.tfstate"
+    region = "us-east-1"
   }
 }
 
@@ -26,7 +26,6 @@ provider "aws" {
   region = local.region
 }
 
-provider "cloudflare" {}
 
 data "aws_iam_policy_document" "bucket_policy" {
   statement {
